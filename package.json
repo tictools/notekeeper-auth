@@ -38,6 +38,6 @@
     "express": "^4.19.2"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.{js, ts}": "eslint --cache --fix"
   }
 }
