@@ -1,3 +1,3 @@
-import uuidService from "./uuidService";
+import uniqueIdentifierService from "./uuidService/uuidService";
 
-export { uuidService };
+export { uniqueIdentifierService };

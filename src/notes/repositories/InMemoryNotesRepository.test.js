@@ -57,7 +57,8 @@ describe("NotesInMemoryRepository", () => {
       expect(notes).toHaveLength(EXPECTED_RESULT.LENGTH_ZERO);
 
       await repository.addNote(mockNote1);
-      expect(notes).toHaveLength(EXPECTED_RESULT.LENGTH_ONE);
+      const updatedNotes = await repository.getAllNotes();
+      expect(updatedNotes).toHaveLength(EXPECTED_RESULT.LENGTH_ONE);
     });
   });
 
