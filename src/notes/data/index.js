@@ -1,4 +1,6 @@
-import { uuidService } from "../../shared/services";
+import { uniqueIdentifierService } from "../../shared/services";
+
+const uuidService = uniqueIdentifierService();
 
 const STATUS = {
   PENDING: "pending",
