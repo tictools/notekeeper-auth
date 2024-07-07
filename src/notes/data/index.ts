@@ -1,20 +1,15 @@
 import { uniqueIdentifierService } from "../../shared/services";
+import { NOTE_STATUS, type Note } from "../types";
 
 const uuidService = uniqueIdentifierService();
 
-const STATUS = {
-  PENDING: "pending",
-  IN_PROGRESS: "in progress",
-  DONE: "done",
-};
-
-const notes = [
+const notes: Note[] = [
   {
     _id: uuidService.generate(),
     name: "Walk the dog",
     description: "Go to the park",
     important: false,
-    status: STATUS.PENDING,
+    status: NOTE_STATUS.IN_PROGRESS,
     due_date: "5/1/2024",
     created_at: 1714552849902,
   },
