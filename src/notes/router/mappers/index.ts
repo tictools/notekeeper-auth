@@ -1,3 +1,3 @@
-import noteMapper from "./noteMapper.js";
+import noteMapper from "./noteMapper";
 
 export { noteMapper };

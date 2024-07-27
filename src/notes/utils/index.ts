@@ -1,6 +1,6 @@
-import checkElementExistsBasedOn from "./checkElementExistsBasedOn.js";
+import checkElementExistsBasedOn from "./checkElementExistsBasedOn";
 import checkNoteDataIsIncomplete from "./checkNoteDataIsIncomplete";
-import checkValidProperties from "./checkValidProperties.js";
+import checkValidProperties from "./checkValidProperties";
 
 export {
   checkElementExistsBasedOn,
