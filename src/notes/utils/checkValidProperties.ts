@@ -1,12 +1,14 @@
+import { Note } from "../types";
+
 const VALID_PROPERTIES = [
   "name",
   "description",
   "important",
   "status",
-  "dueDate"
+  "dueDate",
 ];
 
-const checkValidProperties = (noteContent) => {
+const checkValidProperties = (noteContent: Note): number => {
   return Object.keys(noteContent).filter(
     (key) => !VALID_PROPERTIES.includes(key)
   ).length;
