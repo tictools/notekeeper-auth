@@ -1,7 +1,6 @@
-import notes from "../data";
-import { NotesRepository } from "../types.js";
+import { Note, NotesRepository } from "../types.js";
 
-const InMemoryNotesRepository = (): NotesRepository => ({
+const InMemoryNotesRepository = (notes: Note[]): NotesRepository => ({
   getAllNotes: async () => {
     return notes ?? [];
   },
