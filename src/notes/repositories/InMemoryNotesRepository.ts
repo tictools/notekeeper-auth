@@ -2,11 +2,11 @@ import { Note, NotesRepository } from "../types.js";
 
 const InMemoryNotesRepository = (notes: Note[]): NotesRepository => ({
   getAllNotes: async () => {
-    return notes ?? [];
+    return Promise.resolve(notes ?? []);
   },
 
   getNote: async (index) => {
-    return notes[index] ?? null;
+    return Promise.resolve(notes[index] ?? null);
   },
 
   addNote: async (note) => {
@@ -18,11 +18,11 @@ const InMemoryNotesRepository = (notes: Note[]): NotesRepository => ({
   },
 
   removeNote: async (index) => {
-    return notes.splice(index, 1);
+    return Promise.resolve(notes.splice(index, 1));
   },
 
   findIndexNoteById: async (noteId) => {
-    return notes.findIndex((note) => note._id === noteId);
+    return Promise.resolve(notes.findIndex((note) => note._id === noteId));
   },
 
   removeAllNotes: async () => {

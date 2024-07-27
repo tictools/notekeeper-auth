@@ -2,6 +2,7 @@ import cors from "cors";
 import express from "express";
 
 // import { healthRouterIoC } from "src/health/router";
+import notes from "./notes/data";
 import InMemoryNotesRepository from "./notes/repositories/InMemoryNotesRepository";
 import notesRouterIoC from "./notes/router/notesRouter";
 
@@ -12,7 +13,7 @@ app.use(cors());
 
 // healthRouterIoC({ app });
 
-const inMemoryNotesRepository = InMemoryNotesRepository();
+const inMemoryNotesRepository = InMemoryNotesRepository(notes);
 
 notesRouterIoC(app, inMemoryNotesRepository);
 
